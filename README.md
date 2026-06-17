@@ -1,6 +1,5 @@
-# vsconfig-template-stm32
+# vsconfig-template-stm32  [![English](https://img.shields.io/badge/lang-English-blue)](README.md) [![中文](https://img.shields.io/badge/lang-中文-red)](README.zh-CN.md)
 
-[English](README.md) | [中文](README.zh-CN.md)
 
 A ready-to-use VS Code configuration template for STM32 embedded development. Drop the `.vscode/` folder into any STM32 project built with GCC + Make + OpenOCD and start building, flashing, and debugging immediately.
 
