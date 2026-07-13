@@ -1,7 +1,8 @@
-# vsconfig-template-stm32  [![English](https://img.shields.io/badge/lang-English-blue)](README.md) [![中文](https://img.shields.io/badge/lang-中文-red)](README.zh-CN.md)
-
+# VS Code Config Template for STM32
 
 A ready-to-use VS Code configuration template for STM32 embedded development. Drop the `.vscode/` folder into any STM32 project built with GCC + Make + OpenOCD and start building, flashing, and debugging immediately.
+
+**English** · [中文](README.zh-CN.md)
 
 ## What's Included
 
@@ -110,3 +111,7 @@ Sets Git-Bash as the integrated terminal on Windows, and enables tab completion.
 1. In `c_cpp_properties.json`, change the `defines` (e.g. `STM32F407xx` instead of `STM32F103xE`)
 2. In `launch.json`, update the OpenOCD config file for your target (e.g. `stm32f4x.cfg`)
 3. In `tasks.json`, update the OpenOCD scripts path for your board config
+
+## License
+
+This project does not currently include a license file.

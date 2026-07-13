@@ -1,8 +1,8 @@
-# vsconfig-template-stm32
-
-[English](README.md) | [中文](README.zh-CN.md)
+# VS Code Config Template for STM32
 
 一套即拿即用的 VS Code 配置模板，专为 STM32 嵌入式开发设计。将 `.vscode/` 文件夹放入任何基于 GCC + Make + OpenOCD 的 STM32 工程中，即可立即开始构建、烧录和调试。
+
+[English](README.md) · **中文**
 
 ## 包含内容
 
@@ -111,3 +111,7 @@ your-stm32-project/
 1. 在 `c_cpp_properties.json` 中修改 `defines`（如将 `STM32F103xE` 改为 `STM32F407xx`）
 2. 在 `launch.json` 中更新 OpenOCD 配置文件以匹配目标芯片（如 `stm32f4x.cfg`）
 3. 在 `tasks.json` 中更新 OpenOCD 脚本路径以匹配你的板级配置
+
+## 许可证
+
+本项目暂未包含许可证文件。
