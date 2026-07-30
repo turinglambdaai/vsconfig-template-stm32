@@ -2,9 +2,11 @@
 
 一套即拿即用的 VS Code 配置模板，专为 STM32 嵌入式开发设计。将 `.vscode/` 文件夹放入任何基于 GCC + Make + OpenOCD 的 STM32 工程中，即可立即开始构建、烧录和调试。
 
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visualstudiocode&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 [English](README.md) · **中文**
 
-## 包含内容
+## 功能特性
 
 `.vscode/` 文件夹包含四个配置文件：
 
@@ -25,9 +27,15 @@
 | VS Code + [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) 扩展 | IDE 和调试前端 |
 | CMSIS-DAP（或类似）调试器 | SWD/JTAG 硬件接口 |
 
-## 配置步骤
+## 快速开始
 
-### 1. 复制配置
+### 1. 克隆仓库
+
+```bash
+git clone https://github.com/turinglambdaai/vsconfig-template-stm32.git
+```
+
+### 2. 复制配置
 
 将 `.vscode/` 文件夹复制到你的 STM32 工程根目录：
 
@@ -44,7 +52,7 @@ your-stm32-project/
 └── ...
 ```
 
-### 2. 调整路径和设置
+### 3. 调整路径和设置
 
 每个文件中可能需要根据你的环境修改部分路径：
 
@@ -68,11 +76,24 @@ your-stm32-project/
 
 - `terminal.integrated.shell.windows` — Git-Bash 路径（如安装在其他位置请修改）
 
-### 3. 构建与调试
+### 4. 构建与调试
 
 - **构建**：`Ctrl+Shift+B` 执行 `make`
 - **烧录**：从任务运行器中选择 "flash" 任务
 - **调试**：按 `F5` 通过 OpenOCD 启动 Cortex-Debug 调试会话
+
+## 项目结构
+
+```
+vsconfig-template-stm32/
+├── .vscode/
+│   ├── launch.json             # Cortex-Debug 配置（GDB via OpenOCD）
+│   ├── tasks.json              # 构建（make）+ 烧录（OpenOCD）任务
+│   ├── c_cpp_properties.json   # ARM GCC IntelliSense 配置，含 HAL 宏
+│   └── settings.json           # 编辑器设置（Tab 补全、Git-Bash）
+├── LICENSE
+└── README.md
+```
 
 ## 配置详解
 
@@ -114,4 +135,4 @@ your-stm32-project/
 
 ## 许可证
 
-本项目暂未包含许可证文件。
+基于 [MIT 许可证](LICENSE) 授权。

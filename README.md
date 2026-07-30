@@ -2,11 +2,13 @@
 
 A ready-to-use VS Code configuration template for STM32 embedded development. Drop the `.vscode/` folder into any STM32 project built with GCC + Make + OpenOCD and start building, flashing, and debugging immediately.
 
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visualstudiocode&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 **English** · [中文](README.zh-CN.md)
 
-## What's Included
+## Features
 
-The `.vscode/` folder contains four configuration files:
+Four configuration files are included in the `.vscode/` folder:
 
 | File | Purpose |
 |------|---------|
@@ -15,7 +17,7 @@ The `.vscode/` folder contains four configuration files:
 | `c_cpp_properties.json` | IntelliSense setup for ARM GCC with HAL defines |
 | `settings.json` | Editor settings — tab completion, Git-Bash terminal |
 
-## Prerequisites
+## Requirements
 
 | Tool | Purpose |
 |------|---------|
@@ -25,9 +27,15 @@ The `.vscode/` folder contains four configuration files:
 | VS Code + [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) extension | IDE and debugger frontend |
 | CMSIS-DAP (or similar) debug probe | SWD/JTAG hardware interface |
 
-## Setup
+## Quick Start
 
-### 1. Copy the configuration
+### 1. Clone
+
+```bash
+git clone https://github.com/turinglambdaai/vsconfig-template-stm32.git
+```
+
+### 2. Copy the configuration
 
 Copy the `.vscode/` folder into the root of your STM32 project:
 
@@ -44,7 +52,7 @@ your-stm32-project/
 └── ...
 ```
 
-### 2. Adjust paths and settings
+### 3. Adjust paths and settings
 
 Each file has a few paths you may need to customize for your environment:
 
@@ -68,11 +76,24 @@ Each file has a few paths you may need to customize for your environment:
 
 - `terminal.integrated.shell.windows` — Path to Git-Bash (adjust if installed elsewhere)
 
-### 3. Build and debug
+### 4. Build and debug
 
 - **Build**: `Ctrl+Shift+B` runs `make`
 - **Flash**: Select the "flash" task from the task runner
 - **Debug**: Press `F5` to start a Cortex-Debug session via OpenOCD
+
+## Project Structure
+
+```
+vsconfig-template-stm32/
+├── .vscode/
+│   ├── launch.json             # Cortex-Debug config (GDB via OpenOCD)
+│   ├── tasks.json              # Build (make) + flash (OpenOCD) tasks
+│   ├── c_cpp_properties.json   # IntelliSense for ARM GCC + HAL defines
+│   └── settings.json           # Editor settings (Tab completion, Git-Bash)
+├── LICENSE
+└── README.md
+```
 
 ## Configuration Details
 
@@ -114,4 +135,4 @@ Sets Git-Bash as the integrated terminal on Windows, and enables tab completion.
 
 ## License
 
-This project does not currently include a license file.
+Licensed under the [MIT License](LICENSE).
