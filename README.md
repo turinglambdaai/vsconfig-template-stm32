@@ -1,5 +1,8 @@
 # VS Code Config Template for STM32
 
+> [!WARNING]
+> **Deprecated** — This template is superseded by [led-gcc-stm32](https://github.com/turinglambdaai/led-gcc-stm32), a complete out-of-the-box STM32 project with the same VS Code build / flash / debug workflow already configured and up to date. Please use that repository instead.
+
 A ready-to-use VS Code configuration template for STM32 embedded development. Drop the `.vscode/` folder into any STM32 project built with GCC + Make + OpenOCD and start building, flashing, and debugging immediately.
 
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visualstudiocode&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)

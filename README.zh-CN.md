@@ -1,5 +1,8 @@
 # VS Code Config Template for STM32
 
+> [!WARNING]
+> **已弃用** — 本模板已被 [led-gcc-stm32](https://github.com/turinglambdaai/led-gcc-stm32) 取代。该仓库是一个开箱即用的完整 STM32 工程，内置同样的 VS Code 构建 / 烧录 / 调试工作流，且配置保持最新。请前往该仓库使用。
+
 一套即拿即用的 VS Code 配置模板，专为 STM32 嵌入式开发设计。将 `.vscode/` 文件夹放入任何基于 GCC + Make + OpenOCD 的 STM32 工程中，即可立即开始构建、烧录和调试。
 
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visualstudiocode&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
